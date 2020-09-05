@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Carousel1.css">
+</head>
+
+<body>
+    <div class="lunbo"></div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/Carousel1.js"></script>
+    <script>
+        var obj = {
+            Auto: true,       //true || false  是否自动轮播
+            AutoTime: 2000,   //自动轮播间隔
+            width: 980,       //图片宽度
+            height: 500,      //图片高度
+            //=========图片路径=========
+            src: ['./img/1.jpg', './img/2.jpg', './img/3.jpg', './img/4.jpg', './img/5.jpg', './img/6.jpg', './img/7.jpg', './img/8.jpg', './img/9.jpg'],
+            circular: true,   //true || false  是否有小圆点
+            gesture: true,    //true || false  是否支持手势
+        }
+        //创建轮播
+        $('.lunbo').append(x.createCarousel(obj))
+        //初始化样式
+        x.init(obj);
+        //加载事件
+        x.addEvent(obj);
+    </script>
+</body>
+
+</html>
